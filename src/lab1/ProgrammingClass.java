@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
  * @author purban1
  */
 public abstract class ProgrammingClass {
+    
     private String courseName;
     private String courseNumber;
     private double credits;
