@@ -9,7 +9,9 @@ package lab3;
  * 
  */
 public class RanchHome extends Home{
+
     private int numberOfBedrooms;
+    private final String HOME_TYPE = "I am a ranch style home.";
 
     /**
      * @return the numberOfbedrooms
@@ -26,4 +28,19 @@ public class RanchHome extends Home{
         this.numberOfBedrooms = numberOfbedrooms;
     }
 
+    /**
+     * @return the HOME_TYPE
+     */
+    public String getHOME_TYPE() {
+        return HOME_TYPE;
+    }
+
+    @Override
+    public String toString() {
+        return this.getHOME_TYPE() + " I have a garage size of " + this.getGarageLength() + " x " + this.getGarageWidth() +
+                " feet with a kitchen size of " + this.getKitchenLength() + " x " + this.getKitchenWidth() + " feet. \nMy livingroom "
+                + "dimensions are " + this.getLivingRoomLength() + " x " + this.getLivingRoomWidth() + "."
+                + "\nI have " + this.getNumberOfBedrooms() + " bedrooms.\n";
+    }
+    
 }

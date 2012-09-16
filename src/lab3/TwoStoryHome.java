@@ -9,23 +9,25 @@ package lab3;
  * 
  */
 public class TwoStoryHome extends Home{
-    private int numberOfbedrooms;
+
+    private int numberOfBedrooms;
     private int upperNumberOfBedrooms;
     private int lowerNumberOfBedrooms;
+    private final String HOME_TYPE = "I am a two story home.";
 
     /**
-     * @return the numberOfbedrooms
+     * @return the numberOfBedrooms
      */
     public int getNumberOfBedrooms() {
-        return numberOfbedrooms;
+        return numberOfBedrooms;
     }
 
     /**
-     * @param numberOfbedrooms the numberOfbedrooms to set
+     * @param numberOfBedrooms the numberOfBedrooms to set
      */
     public void setNumberOfBedrooms(int numberOfbedrooms) {
         // Validate the input
-        this.numberOfbedrooms = numberOfbedrooms;
+        this.numberOfBedrooms = numberOfbedrooms;
     }
 
     /**
@@ -64,5 +66,19 @@ public class TwoStoryHome extends Home{
     private void setLowerNumberOfBedrooms(int lowerNumberOfBedrooms) {
         //validate the number being passed.
         this.lowerNumberOfBedrooms = lowerNumberOfBedrooms;
+    }
+    /**
+     * @return the HOME_TYPE
+     */
+    public String getHOME_TYPE() {
+        return HOME_TYPE;
+    }
+    
+    @Override
+    public String toString() {
+        return this.getHOME_TYPE() + " I have a garage size of " + this.getGarageLength() + " x " + this.getGarageWidth() +
+                " feet with a kitchen size of " + this.getKitchenLength() + " x " + this.getKitchenWidth() + " feet. \nMy livingroom "
+                + "dimensions are " + this.getLivingRoomLength() + " x " + this.getLivingRoomWidth() + "."
+                + "\nI have " + this.getNumberOfBedrooms() + " bedrooms.\n";
     }
 }
