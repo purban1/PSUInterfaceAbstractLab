@@ -12,14 +12,32 @@ package lab3;
  * Therefore the only abstract methods will involve the number of bedrooms
  * 
  */
-public abstract class Home {
+public abstract class Home{
     private int garageWidth;
     private int garageLength;
     private int kitchenWidth;
     private int kitchenLength;
     private int livingRoomWidth;
     private int livingRoomLength;
+    private HomeFeature homeFeature = new NoFeature();
 
+       
+    /**
+     * @param homeFeature the homeFeature to set
+     */
+    public void setHomeFeature(HomeFeature feature) {
+        // Validate the number
+        this.homeFeature = feature;
+    }
+    
+    /**
+     * @param homeFeature the homeFeature to set
+     */
+    public String getHomeFeature() {
+        // Validate the number
+        return homeFeature.getHomeFeature() ;
+    }
+    
     /**
      * @return the garageWidth
      */

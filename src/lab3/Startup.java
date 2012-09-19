@@ -2,7 +2,8 @@ package lab3;
 
 /**
  *
- * @author production
+ * @author Patrick Urban
+ * Version 2 of this lab based on instructor feedback
  */
 public class Startup {
     public static void main(String[] args) {
@@ -12,9 +13,6 @@ public class Startup {
         
         // Creating a 2 Story home
         TwoStoryHome twoStory = new TwoStoryHome();
-        
-        // Creating a 2 Story home with finnished Basement
-        TwoStoryHomeBasement tsb = new TwoStoryHomeBasement();
         
         // Setup Ranch home
         rh.setGarageLength(30);
@@ -27,6 +25,10 @@ public class Startup {
         rh.setLivingRoomWidth(10);        
         
         rh.setNumberOfBedrooms(4);
+        
+        System.out.println(rh);
+        
+        rh.setHomeFeature(new DeckInBack());
         
         System.out.println(rh);
         
@@ -44,22 +46,9 @@ public class Startup {
         
         System.out.println(twoStory);
         
-        // Setup Two Story with finnsihed Basement
-        tsb.setGarageLength(25);
-        tsb.setGarageWidth(18);
+        twoStory.setHomeFeature(new FinishedBasement());
         
-        tsb.setKitchenLength(10);
-        tsb.setKitchenWidth(10);
-        
-        tsb.setLivingRoomLength(14);
-        tsb.setLivingRoomWidth(12);
-        
-        tsb.setNumberOfBedrooms(4);
-        
-        tsb.setFinishedBasementLength(22);
-        tsb.setFinishedBasementWidth(12);
-        
-        System.out.println(tsb);
+        System.out.println(twoStory);
         
     }
 }

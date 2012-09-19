@@ -9,8 +9,14 @@ package lab3;
  * the size parameters of the finished portion of the basement.
  * 
  */
-public interface FinishedBasement {
-    public abstract void setSizeOfRoom(int wid, int len);
-    public abstract int getFinishedBasementWidth();
-    public abstract int getFinishedBasementLength();
+public class FinishedBasement implements HomeFeature{
+//    public abstract void setSizeOfRoom(int wid, int len);
+//    public abstract int getFinishedBasementWidth();
+//    public abstract int getFinishedBasementLength();
+    
+    private String feature = "I have a finnished basement.";
+    
+    public String getHomeFeature(){
+        return feature;
+    }
 }

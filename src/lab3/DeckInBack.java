@@ -9,10 +9,16 @@ package lab3;
  * the size parameters of the deck.
  * 
  */
-public interface DeckInBack {
-    public abstract void setDeckLength(int deckLength);
-    public abstract void setDeckWidth(int deckWidth);
-    public abstract int getDeckLength();
-    public abstract int getDeckWidth();
+public class DeckInBack implements HomeFeature{
+//    public abstract void setDeckLength(int deckLength);
+//    public abstract void setDeckWidth(int deckWidth);
+//    public abstract int getDeckLength();
+//    public abstract int getDeckWidth();
+    
+    private String feature = "This home has a deck attached.";
+    
+    public String getHomeFeature(){
+        return feature;
+    }
 }
 

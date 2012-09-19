@@ -76,9 +76,10 @@ public class TwoStoryHome extends Home{
     
     @Override
     public String toString() {
-        return this.getHOME_TYPE() + " I have a garage size of " + this.getGarageLength() + " x " + this.getGarageWidth() +
+        return "\n" + this.getHOME_TYPE() + " I have a garage size of " + this.getGarageLength() + " x " + this.getGarageWidth() +
                 " feet with a kitchen size of " + this.getKitchenLength() + " x " + this.getKitchenWidth() + " feet. \nMy livingroom "
                 + "dimensions are " + this.getLivingRoomLength() + " x " + this.getLivingRoomWidth() + "."
-                + "\nI have " + this.getNumberOfBedrooms() + " bedrooms.\n";
+                + "\nI have " + this.getNumberOfBedrooms() + " bedrooms."
+                + "\n" + super.getHomeFeature();
     }
 }
